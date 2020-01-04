@@ -1,0 +1,21 @@
+[2019-10-15 20:00:17]2019-10-15 20:00:17------------------- start ------------------- 
+[2019-10-15 20:00:18][SUCC][Select_ItemLink][COUNT = 26681]
+[2019-10-15 20:00:18][SUCC][Select_ItemPrice_URL][COUNT = 9][SITE = 명인코리아]
+[2019-10-15 20:00:19][Exception][Get_ItemPrice][ERR = 'list' object has no attribute 'get_text'][URL = http://www.myoung119.com/shop/goods/./goods_view.php?goodsno=100291&category=001078]
+[2019-10-15 20:00:19][Exception][Get_ItemPrice][ERR = 'list' object has no attribute 'get_text'][URL = http://www.myoung119.com/shop/goods/./goods_view.php?goodsno=100293&category=001078]
+[2019-10-15 20:00:20][Exception][Get_ItemPrice][ERR = 'list' object has no attribute 'get_text'][URL = http://www.myoung119.com/shop/goods/./goods_view.php?goodsno=100294&category=001078]
+[2019-10-15 20:00:21][Exception][Get_ItemPrice][ERR = 'list' object has no attribute 'get_text'][URL = http://www.myoung119.com/shop/goods/./goods_view.php?goodsno=100295&category=001078]
+[2019-10-15 20:00:22][Exception][Get_ItemPrice][ERR = 'list' object has no attribute 'get_text'][URL = http://www.myoung119.com/shop/goods/./goods_view.php?goodsno=100296&category=001078]
+[2019-10-15 20:00:23][Exception][Get_ItemPrice][ERR = 'list' object has no attribute 'get_text'][URL = http://www.myoung119.com/shop/goods/./goods_view.php?goodsno=100297&category=001078]
+[2019-10-15 20:00:24][Exception][Get_ItemPrice][ERR = 'list' object has no attribute 'get_text'][URL = http://www.myoung119.com/shop/goods/./goods_view.php?goodsno=100298&category=001078]
+[2019-10-15 20:00:25][Exception][Get_ItemPrice][ERR = 'list' object has no attribute 'get_text'][URL = http://www.myoung119.com/shop/goods/./goods_view.php?goodsno=100299&category=001078]
+[2019-10-15 20:00:25][Exception][Get_ItemPrice][ERR = 'list' object has no attribute 'get_text'][URL = http://www.myoung119.com/shop/goods/./goods_view.php?goodsno=100300&category=001078]
+[2019-10-15 20:00:25][FAIL] 작업 실패 [site = 명인코리아]
+[2019-10-15 20:00:25]2019-10-15 20:00:25------------------- end  -------------------
+[2019-10-15 20:01:54]2019-10-15 20:01:54------------------- start ------------------- 
+[2019-10-15 20:01:54][SUCC][Select_ItemLink][COUNT = 26681]
+[2019-10-15 20:01:54][SUCC][Select_ItemPrice_URL][COUNT = 9][SITE = 명인코리아]
+[2019-10-15 20:02:12][Exception][Get_ItemPrice][ERR = 'list' object has no attribute 'text'][URL = http://www.myoung119.com/shop/goods/./goods_view.php?goodsno=100291&category=001078]
+[2019-10-15 20:02:43]2019-10-15 20:02:43------------------- start ------------------- 
+[2019-10-15 20:02:44][SUCC][Select_ItemLink][COUNT = 26681]
+[2019-10-15 20:02:44][SUCC][Select_ItemPrice_URL][COUNT = 9][SITE = 명인코리아]
