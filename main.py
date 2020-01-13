@@ -237,11 +237,12 @@ def Load_SCH():
 
     count = int(config['SCH']['COUNT'])
 
-    for cnt in range(1, count):
+    for cnt in range(0, count):
         task = Task()
-        task.m_sch = config['SCH']['TASK_SCH_%d' % cnt]
-        task.m_start = int(config['SCH']['TASK_START_%d' % cnt])
-        task.m_end = int(config['SCH']['TASK_END_%d' % cnt])
+        task.m_sch = config['SCH']['START_TIME']
+        task.m_start = cnt * (int(config['SCH']['COLLECT_COUNT']))
+        task.m_end = task.m_start + int(config['SCH']['COLLECT_COUNT'])
+
         conf.m_Task.append(task)
 
     conf.m_complete_sch = config['COMPLETE']['TASK_SCH']
@@ -249,24 +250,24 @@ def Load_SCH():
     return conf
 
 def Collect_Price():
-    Scraping(0, 2000000)
+    # Scraping(0, 2000000)
 
-    #conf = Load_SCH()
+    conf = Load_SCH()
 
     # TASK_NOW = YES 인지 확인
-    #if 'YES' == conf.m_TaskNow.m_sch:
-    #Scraping(conf.m_TaskNow.task_start, conf.m_TaskNow.task_end)
-    # else:
-    #     # 로그를 일단 지우고 시작한다.
-    #     Log_Delete( int(conf.m_log_keep_day) )
+    if 'YES' == conf.m_TaskNow.m_sch:
+        Scraping(conf.m_TaskNow.task_start, conf.m_TaskNow.task_end)
+    else:
+        # 로그를 일단 지우고 시작한다.
+        Log_Delete( int(conf.m_log_keep_day) )
 
-    #     # 스케줄 작업 등록 및 시작 
-    #     cron = sch.Cron()
-    #     cron.add(conf.m_log_sch, Log_Delete( int(conf.m_log_keep_day) )) 
-    #     for task in conf.m_Task:
-    #         cron.add(task.m_sch, Scraping, args=(task.m_start, task.m_end) ) 
-    #     cron.add(conf.m_complete_sch, Save_Excel) 
-    #     cron.run()
+        # 스케줄 작업 등록 및 시작 
+        cron = sch.Cron()
+        cron.add(conf.m_log_sch, Log_Delete( int(conf.m_log_keep_day) )) 
+        for task in conf.m_Task:
+            cron.add(task.m_sch, Scraping, args=(task.m_start, task.m_end) ) 
+        #cron.add(conf.m_complete_sch, Save_Excel) 
+        cron.run()
 
 def Save_Excel():
     db = SQLite_Item.SQLiteItem()
